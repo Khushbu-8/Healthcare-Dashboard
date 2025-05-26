@@ -1,0 +1,241 @@
+.dashboard-main-content {
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling for content */
+  position: absolute;
+  top: 0;
+  left: 19%;
+  width: calc(100% - 260px);
+
+  
+}
+
+.dashboard-header {
+  display: flex;
+  padding: 0;
+  background: transparent;
+  gap: 10px; /* Space between header elements */
+  border: none;
+}
+
+.dashboard-header .searchbox {
+  flex-grow: 1; /* Allow search box to take available space */
+  display: flex;
+  align-items: center;
+  background-color: #ffffff; /* White background for search box */
+  border-radius: 8px;
+  padding: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.bell-icon {
+  width: 35x;
+  height: 35px;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  color: #3635a7;
+  background-color: #ffffff;
+}
+.bar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  display: none;
+  color: #3635a7;
+  background-color: #ffffff;
+}
+.bell-icon img {
+  object-fit: cover;
+}
+.dashboard-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard-title h1 {
+  margin: 0 !important;
+}
+.dashboard-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1e293b; /* Dark blue/grey text color */
+}
+
+/* Placeholder for time filter if implemented */
+.time-filter {
+  font-size: 12px;
+  color: #3635a7;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Approximate ratio from image */
+  gap: 30px;
+}
+
+.main-panel-left,
+.main-panel-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between components within a panel */
+  padding: 20px;
+  overflow: hidden;
+}
+.main-panel-left {
+  border-radius: 12px;
+}
+.main-panel-right {
+  background-color: #f6faff;
+  
+}
+.anatomy-and-cards-wrapper {
+  display: grid;
+  grid-template-columns: auto 150px; /* Adjust 300px based on HealthStatusCards width */
+  gap: 25px; /* Space between AnatomySection and HealthStatusCards */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.placeholder-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #777;
+  min-height: 150px; /* Example min height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 0;
+  gap: 20px; /* Space between user profile and add button */
+}
+
+.user-profile {
+  background-color: #03dff0 !important; /* Blue background for user profile */
+}
+
+.user-avatar {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: none !important; /* Remove border */
+  background-color: #03dff0;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-button,
+.user-profile {
+  background-color: #3635a7; /* Blue background for button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 10px 15px;
+  font-size: 20px; /* For '+' icon */
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px; /* Square-ish button */
+  height: 35px;
+}
+.user-profile-left{
+ display: none;  
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-main-content {
+  left: 25%;  
+}
+  .dashboard-grid {
+    grid-template-columns: 1fr 0.8fr; /* Stack panels on smaller screens */
+  }
+  .anatomy-and-cards-wrapper {
+    display: grid;
+    grid-template-columns: auto 130px; /* Adjust 300px based on HealthStatusCards width */
+    gap: 25px; /* Space between AnatomySection and HealthStatusCards */
+    align-items: flex-start; /* Align items to the top */
+  }
+}
+
+@media (max-width: 768px) {
+    .dashboard-main-content {
+  left: 30%;  
+}
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* Stack panels on smaller screens */
+    gap: 30px !important; /* Increase gap for better spacing */
+    overflow: hidden;
+  }
+  .main-panel-right {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  .anatomy-and-cards-wrapper {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: auto 170px; /* Adjust 300px based on HealthStatusCards width */
+    gap: 25px; /* Space between AnatomySection and HealthStatusCards */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+  }
+  .dashboard-grid {
+    gap: 20px;
+  }
+  .main-panel-left,
+  .main-panel-right {
+    gap: 20px;
+  }
+  .user-profile-left {
+    display: flex;
+  
+}
+.user-profile-right{
+  display: none;
+}
+}
+@media (max-width: 425px) {
+   .dashboard-main-content {
+    width: 100%;
+  left: 0;  
+}
+  .anatomy-and-cards-wrapper {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr; /* Adjust 300px based on HealthStatusCards width */
+    gap: 25px; /* Space between AnatomySection and HealthStatusCards */
+    align-items: flex-start; /* Align items to the top */
+  }
+  .bar-icon{
+    display: flex;
+  }
+}

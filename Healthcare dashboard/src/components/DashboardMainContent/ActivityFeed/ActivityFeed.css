@@ -1,0 +1,23 @@
+.activity-feed-card {
+  background-color: #f7fafd;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.activity-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.activity-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.activity-summary {
+  font-size: 0.875rem;
+  color: #888;
+}

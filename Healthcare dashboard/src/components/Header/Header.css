@@ -1,0 +1,89 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Adjusted padding based on image */
+  background-color: #ffffff; /* White background for header */
+  border-bottom: 1px solid #e0e0e0; /* Subtle border */
+  height: 70px; /* Approximate height from image */
+  box-sizing: border-box;
+}
+
+.logo-title {
+  font-size: 28px; /* Larger font size for logo */
+  font-weight: bold;
+  color: #2A72E6; /* Blue color from image */
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  background-color: #f0f4f8; /* Light grey background for search bar */
+  border-radius: 20px; /* Rounded corners */
+  padding: 8px 15px;
+  width: 300px; /* Approximate width */
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Placeholder for search icon if added */
+/* .search-icon {
+  color: #777;
+} */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Spacing between action items */
+}
+
+.action-icon {
+  color: #555;
+  cursor: pointer;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2A72E6; /* Blue border for avatar */
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-button {
+  background-color: #2A72E6; /* Blue background for button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 10px 15px;
+  font-size: 20px; /* For '+' icon */
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Square-ish button */
+  height: 40px;
+}
+
+.add-button:hover {
+  background-color: #1e5bb1; /* Darker blue on hover */
+}

@@ -1,0 +1,45 @@
+.upcoming-schedule-card {
+  background-color: transparent; /* White background for this card container */
+  border-radius: 16px;
+  padding: 40px 10px;
+}
+
+.upcoming-schedule-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1E293B;
+  margin: 0 0 20px 0; /* Space below title */
+}
+
+.schedule-days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between day sections */
+}
+
+
+.schedule-day-heading {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b3b2c4; /* Slightly darker grey for day headings */
+  margin: 0 0 12px 0; /* Space below day heading */
+}
+
+
+ .appointments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  /* grid-template-columns: repeat(1fr, 1fr);  */
+  gap: 15px; 
+} 
+
+.simple-appointment-card {
+  background-color: #E9F0FD; /* Light blue background as per image */
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

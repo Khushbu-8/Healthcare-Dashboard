@@ -1,0 +1,149 @@
+.dashboard-sidebar {
+  width: 260px; /* Width from image */
+  background-color: #f6faff; /* White background for sidebar */
+  padding: 10px 0;
+  height: 100vh; /* Full height minus header */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: fixed; /* Fixed position for sidebar */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  transition: width 0.3s ease; /* Smooth transition for opening/closing */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.close-btn {
+  position: absolute;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  top: -5px; /* Position at the top */
+  right: 10px; /* Position at the right */
+  margin-top: 20px;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.nav-section h1 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.nav-section h1 span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #05dfe9; /* Blue color for title */
+  font-weight: 700;
+}
+.nav-section {
+  margin-bottom: 10px;
+  padding: 0 25px; /* Horizontal padding for section content */
+}
+
+.nav-section.settings-section {
+  margin-top: auto; /* Pushes settings to the bottom */
+  margin-bottom: 0;
+}
+
+.nav-heading {
+  font-size: 12px;
+  color: #8a92a6; /* Grey color for heading from image */
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px; /* Vertical padding for items, horizontal padding is on nav-section */
+  margin-bottom: 5px; /* Space between items */
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #b5bbc2; /* Dark grey for nav links */
+  font-size: 14px;
+  font-weight: 500;
+  flex-grow: 1;
+  margin-left: 15px; /* Space between icon and text */
+}
+
+.nav-icon {
+  width: 20px; /* Fixed width for icon container */
+  height: 20px;
+  display: inline-block;
+  /* background-color: #ccc; */ /* Placeholder for actual icons */
+  /* Placeholder for icon styling */
+  color: #b5bbc2; /* Icon color */
+}
+
+.nav-item.active {
+  background-color: #e9f0fd; /* Light blue background for active item */
+}
+
+.nav-item.active a,
+.nav-item.active .nav-icon {
+  color: #000; /* Blue color for active link text and icon */
+  font-weight: 600;
+}
+
+.nav-item:not(.active):hover {
+  background-color: #e9f0fd; /* Light hover effect */
+}
+
+.nav-item:not(.active):hover a,
+.nav-item:not(.active):hover .nav-icon {
+  color: #000; /* Blue color on hover for text and icon */
+}
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    display: block; /* Hide sidebar on smaller screens */
+    width: 200px; /* Adjust width for smaller screens */
+  }
+}
+@media (max-width: 425px) {
+  .dashboard-sidebar.open {
+    display: flex; /* Show sidebar when open */
+  }
+  .dashboard-sidebar.closed {
+    display: none; /* Show sidebar when open */
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .close-btn {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  /* .dashboard-sidebar{
+    display: none; 
+  } */
+}

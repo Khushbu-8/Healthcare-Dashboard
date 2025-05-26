@@ -1,0 +1,91 @@
+.anatomy-section-card {
+  background-color: #f6faff;
+  border-radius: 16px; /* More rounded corners as per image */
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); /* Softer, more pronounced shadow */
+  position: relative; /* For positioning indicators */
+  overflow: hidden; /* To ensure indicators don't overflow card boundaries if not positioned carefully */
+}
+
+.anatomy-image-container {
+  position: relative; /* For absolute positioning of indicators relative to the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px; /* Adjust as needed based on image aspect ratio */
+}
+
+.anatomy-image {
+  max-width: 100%;
+  max-height: 350px; /* Adjust as needed */
+  object-fit: contain;
+}
+
+.health-indicator {
+  position: absolute;
+  background-color: #2A72E6; /* Default blue, will be overridden by status */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px; /* Pill shape */
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+.health-indicator.healthy {
+  background-color: #3433ae; /* Green for healthy */
+  /* If heart icon is part of this, it should be styled here or as an SVG */
+}
+.health-indicator.healthy.heart { /* Specific style for healthy heart if different */
+    background-color: #02e2f1; /* Blue for healthy heart as per image */
+}
+
+
+.health-indicator.warning {
+  background-color: #02e2f1; /* Yellow for warning */
+}
+
+.health-indicator.critical {
+  background-color: #b44e4e; /* Red for critical */
+}
+
+/* Example: if an icon is used inside the indicator */
+.health-indicator svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Placeholder for zoom controls if they were part of the design */
+.anatomy-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.anatomy-controls button {
+  background-color: #f6faff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Specific positioning for indicators based on the image */
+/* These will be set via inline styles from the data, but you can have base styles */
+/* For "Healthy Heart" */
+/* .health-indicator[data-id="heart"] { ... }
+
+/* For "Healthy Leg" */
+/* .health-indicator[data-id="leg"] { ... } */

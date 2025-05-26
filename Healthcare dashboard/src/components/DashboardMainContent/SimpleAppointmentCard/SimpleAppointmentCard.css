@@ -1,0 +1,48 @@
+.simple-appointment-card {
+  background-color: #dde2f9; /* Light blue background as per image */
+  border-radius: 20px;
+  padding: 25px 20px;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.simple-appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointment-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1E293B; /* Darker text color */
+  margin: 0;
+}
+
+.appointment-card-time {
+  font-size: 12px;
+  color: #4B5563; /* Grey text for time */
+  margin: 0;
+}
+
+.appointment-card-icon img{
+  width: 20px;
+  height: 20px;
+ 
+  background-color: #dde2f9; /* Slightly darker blue for icon background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2A72E6; /* Icon color */
+  /* Placeholder for actual icon styling */
+  /* Example: if using an image or SVG */
+  /* img, svg { width: 60%; height: 60%; } */
+}
